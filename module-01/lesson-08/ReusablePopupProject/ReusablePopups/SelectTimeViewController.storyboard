@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wq3-mb-qw9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegation-->
+        <scene sceneID="pNM-ZQ-PRG">
+            <objects>
+                <viewController id="Wq3-mb-qw9" customClass="SelectTimeViewController" customModule="ReusablePopups" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oV8-Bd-QpV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abl-Qv-kiT">
+                                <rect key="frame" x="278" y="66" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Time"/>
+                                <connections>
+                                    <action selector="selectTime_TouchUpInside:" destination="Wq3-mb-qw9" eventType="touchUpInside" id="QPP-00-jMg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zh-k4-HR3">
+                                <rect key="frame" x="16" y="71" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Delegation" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PMo-zs-tQA">
+                                <rect key="frame" x="104" y="312" width="167" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delegation: The act of giving responsiblity to another" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9v-bv-ukD">
+                                <rect key="frame" x="16" y="363" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Delegation" translatesAutoresizingMaskIntoConstraints="NO" id="Yp3-72-ZEQ">
+                                <rect key="frame" x="137" y="153" width="100" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-SL-JRS">
+                                <rect key="frame" x="137" y="513" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Navigate Away"/>
+                                <connections>
+                                    <segue destination="cPy-XZ-bU0" kind="show" id="nyP-tz-Rrs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PMo-zs-tQA" firstAttribute="centerX" secondItem="oV8-Bd-QpV" secondAttribute="centerX" id="7QS-B4-8ym"/>
+                            <constraint firstItem="PMo-zs-tQA" firstAttribute="centerY" secondItem="oV8-Bd-QpV" secondAttribute="centerY" id="7yF-3N-gbe"/>
+                            <constraint firstItem="p9v-bv-ukD" firstAttribute="top" secondItem="PMo-zs-tQA" secondAttribute="bottom" constant="8" id="CnW-sg-1A9"/>
+                            <constraint firstItem="p9v-bv-ukD" firstAttribute="centerX" secondItem="oV8-Bd-QpV" secondAttribute="centerX" id="YWI-Ai-Qhg"/>
+                            <constraint firstItem="PMo-zs-tQA" firstAttribute="top" secondItem="Yp3-72-ZEQ" secondAttribute="bottom" constant="59" id="bPt-8M-HKP"/>
+                            <constraint firstItem="Yp3-72-ZEQ" firstAttribute="centerX" secondItem="oV8-Bd-QpV" secondAttribute="centerX" id="xkc-1I-dV9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bHO-Yi-Wee"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Delegation" image="DelegationIcon" id="4aw-8v-Y2u"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="6zh-k4-HR3" id="sIb-Yd-dtQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbX-cn-k1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="210.94452773613196"/>
+        </scene>
+        <!--DelegateViewController-->
+        <scene sceneID="xfq-vP-HBT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DelegateViewController" id="cPy-XZ-bU0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzh-OD-UmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747" y="210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Delegation" width="100" height="100"/>
+        <image name="DelegationIcon" width="30" height="30"/>
+    </resources>
+</document>
